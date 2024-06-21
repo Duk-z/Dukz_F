@@ -1,14 +1,13 @@
 body {
-    overflow: hidden;
-    height: fit-content;
+    overflow: visible;
 }
 .container {
     text-align: center;
     padding-bottom: 40px;
 }
 .fix-container {
-    position: -webkit-sticky; 
-    position: sticky;
+    position: -webkit-sticky !important; 
+    position: sticky !important;
     top: 0; 
     z-index: 2;
     background-color: white; 
