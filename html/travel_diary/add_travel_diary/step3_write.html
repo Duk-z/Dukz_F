@@ -15,35 +15,35 @@
 
 <body>
     <div class="container">
-            <div class="title">
-                <div class="upload-container">
-                    <a id="upload">발행하기</a>
-                </div>
-                일지를 기록해주세요!
+        <div class="title">
+            <div class="upload-container">
+                <a id="upload">발행하기</a>
             </div>
-            <div class="input-container" onchange="input_onchange()">
-                <label class="radio-group">
-                    <input type="radio" name="input" value="text" checked>
-                    <span>글자</span>
-                </label>
-                <label class="radio-group">
-                    <input type="radio" name="input" value="image">
-                    <span>사진</span>
-                </label>
-                <label class="radio-group">
-                    <input type="radio" name="input" value="align">
-                    <span>정렬</span>
-                </label>
-                <label class="radio-group" onclick="create_plan_onClick()">
-                    <input type="button" name="input" value="create-plan">
-                    <span>일정 만들기</span>
-                </label>
-                <label class="radio-group">
-                    <input type="radio" name="input" value="import-plan">
-                    <span>일정 가져오기</span>
-                </label>
-            </div>
-            
+            일지를 기록해주세요!
+        </div>
+        <div class="input-container" onchange="input_onchange()">
+            <label class="radio-group">
+                <input type="radio" name="input" value="text" checked>
+                <span>글자</span>
+            </label>
+            <label class="radio-group">
+                <input type="radio" name="input" value="image">
+                <span>사진</span>
+            </label>
+            <label class="radio-group">
+                <input type="radio" name="input" value="align">
+                <span>정렬</span>
+            </label>
+            <label class="radio-group" onclick="create_plan_onClick()">
+                <input type="button" name="input" value="create-plan">
+                <span>일정 만들기</span>
+            </label>
+            <label class="radio-group">
+                <input type="radio" name="input" value="import-plan">
+                <span>일정 가져오기</span>
+            </label>
+        </div>
+
         <div class="fix-container">
             <div class="sub-input-container">
                 <div class="text-container">
@@ -88,94 +88,95 @@
             </div>
         </div>
 
-        <!-- card-news-modal -->
-        <div id="card-news-modal" class="modal">
-            <div class="card-modal-content">
-                <div class="card-top-container">
-                    <span class="close" id="card-close">&times;</span>
-                    <div class="card-image-container">
-                        <span class="add-image">&#43;</span>
-                        <input type="file" id="image-input" accept="image/*" style="display:none;">
+    </div>
+
+    <!-- card-news-modal -->
+    <div id="card-news-modal" class="modal">
+        <div class="card-modal-content">
+            <div class="card-top-container">
+                <span class="close" id="card-close">&times;</span>
+                <div class="card-image-container">
+                    <span class="add-image">&#43;</span>
+                    <input type="file" id="image-input" accept="image/*" style="display:none;">
+                </div>
+            </div>
+
+            <div class="info-container">
+                <div class="line-container">
+                    <div class="info-sub-container">
+                        <img class="info-img" id="pin-image" src="../../../Image/icon/card_icon/pin_uninput.svg">
+                        <input type="text" class="info-txt place" id="place" placeholder="장소를 입력해주세요">
+                    </div>
+                    <div class="star-rating">
+                        <img onclick="setStarRating(1)" class="star" id="star1"
+                            src="../../../Image/icon/star/un_fill.svg">
+                        <img onclick="setStarRating(2)" class="star" id="star2"
+                            src="../../../Image/icon/star/un_fill.svg">
+                        <img onclick="setStarRating(3)" class="star" id="star3"
+                            src="../../../Image/icon/star/un_fill.svg">
+                        <img onclick="setStarRating(4)" class="star" id="star4"
+                            src="../../../Image/icon/star/un_fill.svg">
+                        <img onclick="setStarRating(5)" class="star" id="star5"
+                            src="../../../Image/icon/star/un_fill.svg">
                     </div>
                 </div>
-
-                <div class="info-container">
-                    <div class="line-container">
-                        <div class="info-sub-container">
-                            <img class="info-img" id="pin-image" src="../../../Image/icon/card_icon/pin_uninput.svg">
-                            <input type="text" class="info-txt place" id="place" placeholder="장소를 입력해주세요">
+                <div class="info-sub-container">
+                    <img class="info-img" id="time-image" src="../../../Image/icon/card_icon/time_uninput.svg">
+                    <div class="info-txt" id="time">시간을 입력해주세요</div>
+                </div>
+                <div class="info-sub-container">
+                    <img class="info-img" id="yen-image" src="../../../Image/icon/card_icon/yen_uninput.svg">
+                    <span class="yen">
+                        <input type="number" class="input-content" id="yen-input" placeholder="금액을 입력해주세요">
+                        <span id="yen-txt">円</span>
+                    </span>
+                </div>
+                <div class="review-container">
+                    <textarea class="input-content" id="review" placeholder="후기를 입력해주세요"></textarea>
+                </div>
+                <div class="card-bottom-container">
+                    <div class="hashtag-div">
+                        <div class="hashtag-container">
+                            <input class="hashtag" name="basic" placeholder="해시태그">
                         </div>
-                        <div class="star-rating">
-                            <img onclick="setStarRating(1)" class="star" id="star1"
-                                src="../../../Image/icon/star/un_fill.svg">
-                            <img onclick="setStarRating(2)" class="star" id="star2"
-                                src="../../../Image/icon/star/un_fill.svg">
-                            <img onclick="setStarRating(3)" class="star" id="star3"
-                                src="../../../Image/icon/star/un_fill.svg">
-                            <img onclick="setStarRating(4)" class="star" id="star4"
-                                src="../../../Image/icon/star/un_fill.svg">
-                            <img onclick="setStarRating(5)" class="star" id="star5"
-                                src="../../../Image/icon/star/un_fill.svg">
-                        </div>
                     </div>
-                    <div class="info-sub-container">
-                        <img class="info-img" id="time-image" src="../../../Image/icon/card_icon/time_uninput.svg">
-                        <div class="info-txt" id="time">시간을 입력해주세요</div>
-                    </div>
-                    <div class="info-sub-container">
-                        <img class="info-img" id="yen-image" src="../../../Image/icon/card_icon/yen_uninput.svg">
-                        <span class="yen">
-                            <input type="number" class="input-content" id="yen-input" placeholder="금액을 입력해주세요">
-                            <span id="yen-txt">円</span>
-                        </span>
-                    </div>
-                    <div class="review-container">
-                        <textarea class="input-content" id="review" placeholder="후기를 입력해주세요"></textarea>
-                    </div>
-                    <div class="card-bottom-container">
-                        <div class="hashtag-div">
-                            <div class="hashtag-container">
-                                <input class="hashtag" name="basic" placeholder="해시태그">
-                            </div>
-                        </div>
-                        <button id="cardSaveBtn">완료</button>
-                    </div>
+                    <button id="cardSaveBtn">완료</button>
                 </div>
             </div>
         </div>
-        <!-- time-picker-modal -->
-        <div id="time-modal" class="modal">
-            <div class="time-modal-content">
-                <div class="time-title-container">
-                    <span class="time-title">시간 선택</span>
-                    <span class="close" id="time-close">&times;</span>
+    </div>
+    <!-- time-picker-modal -->
+    <div id="time-modal" class="modal">
+        <div class="time-modal-content">
+            <div class="time-title-container">
+                <span class="time-title">시간 선택</span>
+                <span class="close" id="time-close">&times;</span>
+            </div>
+            <div>
+                <span class="time-sub-text">시작 시간</span>
+                <div class="time-picker">
+                    <select class="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <select class="hours"></select>
+                    <select class="minutes"></select>
                 </div>
-                <div>
-                    <span class="time-sub-text">시작 시간</span>
-                    <div class="time-picker">
-                        <select class="ampm">
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                        </select>
-                        <select class="hours"></select>
-                        <select class="minutes"></select>
-                    </div>
+            </div>
+            <div>
+                <span class="time-sub-text">종료 시간</span>
+                <div class="time-picker">
+                    <select class="ampm">
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                    <select class="hours"></select>
+                    <select class="minutes"></select>
                 </div>
-                <div>
-                    <span class="time-sub-text">종료 시간</span>
-                    <div class="time-picker">
-                        <select class="ampm">
-                            <option value="AM">AM</option>
-                            <option value="PM">PM</option>
-                        </select>
-                        <select class="hours"></select>
-                        <select class="minutes"></select>
-                    </div>
-                </div>
+            </div>
 
-                <div class="time-savebtn-div">
-                    <button id="saveBtn">확인</button>
-                </div>
+            <div class="time-savebtn-div">
+                <button id="saveBtn">확인</button>
             </div>
         </div>
     </div>
